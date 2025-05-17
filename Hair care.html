@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hair Care - Beauty & Self-Growth</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* CSS Khusus untuk Halaman Hair Care */
+    .haircare-header {
+      background-color: #f9f5f3;
+      padding: 60px 0;
+      text-align: center;
+    }
+    
+    .haircare-header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #e29c8f;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .haircare-header p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: #666;
+    }
+    
+    .haircare-categories {
+      padding: 50px 0;
+      background-color: #fff;
+    }
+    
+    .category-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    
+    .haircare-card {
+      background-color: #f9f5f3;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .haircare-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .haircare-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .haircare-card-content {
+      padding: 20px;
+    }
+    
+    .haircare-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 10px;
+    }
+    
+    .haircare-card p {
+      color: #666;
+      margin-bottom: 15px;
+      min-height: 60px;
+    }
+    
+    .haircare-card a {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #e29c8f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .haircare-card a:hover {
+      background-color: #d48a7d;
+    }
+    
+    .featured-routines {
+      padding: 50px 0;
+      background-color: #f9f5f3;
+    }
+    
+    .featured-routines h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 40px;
+    }
+    
+    .routine-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    
+    .routine-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .routine-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .routine-content {
+      padding: 20px;
+    }
+    
+    .routine-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 10px;
+    }
+    
+    .routine-card p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    
+    .routine-card a {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #e29c8f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .routine-card a:hover {
+      background-color: #d48a7d;
+    }
+    
+    .haircare-tips {
+      padding: 50px 0;
+      background-color: #fff;
+    }
+    
+    .haircare-tips h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 40px;
+    }
+    
+    .tips-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .tip-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #f9f5f3;
+      border-radius: 10px;
+    }
+    
+    .tip-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #e29c8f;
+      margin-right: 20px;
+      min-width: 50px;
+    }
+    
+    .tip-content h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 10px;
+    }
+    
+    .tip-content p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Beauty &amp; Self-Growth</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../beauty.html">Beauty</a>
+      <a href="../self growth.html">Self Growth</a>
+      <a href="../community.html">Community</a>
+      <a href="../about Us.html">About Us</a>
+    </nav>
+    <div class="search-box">
+      <input type="text" placeholder="Search in site" aria-label="Search in site" />
+    </div>
+  </header>
+
+  <section class="haircare-header">
+    <h1>Hair Care</h1>
+    <p>Find tips for healthy hair, styling ideas, and product recommendations.</p>
+  </section>
+
+  <section class="haircare-categories">
+    <div class="category-container">
+      <div class="haircare-card">
+        <img src="https://i.pinimg.com/736x/f6/62/43/f662436837e8a8016b5a7cace143414c.jpg" alt="Hair Treatment">
+        <div class="haircare-card-content">
+          <h3>Hair Treatment</h3>
+          <p>Perawatan rambut intensif untuk mengatasi berbagai masalah rambut seperti kerusakan dan rambut kering.</p>
+          <a href="../beauty.html">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="haircare-card">
+        <img src="https://i.pinimg.com/736x/5e/28/16/5e2816c055a5d754f952f35e0e30500d.jpg" alt="Hair Styling">
+        <div class="haircare-card-content">
+          <h3>Hair Styling</h3>
+          <p>Tips dan trik styling rambut untuk berbagai acara, dari gaya sehari-hari hingga acara formal.</p>
+          <a href="../beauty.html">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="haircare-card">
+        <img src="https://i.pinimg.com/736x/ce/0b/04/ce0b042ac7e3bc93ded15545e0267447.jpg" alt="Hair Coloring">
+        <div class="haircare-card-content">
+          <h3>Hair Coloring</h3>
+          <p>Panduan lengkap untuk mewarnai rambut, dari pemilihan warna hingga perawatan setelah pewarnaan.</p>
+          <a href="../beauty.html">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="haircare-card">
+        <img src="https://i.pinimg.com/736x/96/42/dc/9642dca5aa8f7972defdab3c48be9015.jpg" alt="Hair Growth">
+        <div class="haircare-card-content">
+          <h3>Hair Growth</h3>
+          <p>Tips dan produk untuk mempercepat pertumbuhan rambut dan mengatasi masalah kerontokan.</p>
+          <a href="../beauty.html">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="haircare-card">
+        <img src="https://i.pinimg.com/736x/4f/13/d6/4f13d663b07b044cbaecbf80ef94bf06.jpg" alt="Scalp Care">
+        <div class="haircare-card-content">
+          <h3>Scalp Care</h3>
+          <p>Perawatan kulit kepala yang sehat sebagai dasar untuk rambut yang indah dan kuat.</p>
+          <a href="../beauty.html">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="haircare-card">
+        <img src="https://i.pinimg.com/736x/15/85/44/15854435a4c4b23964dc9967d6f566ec.jpg" alt="Hair Types">
+        <div class="haircare-card-content">
+          <h3>Hair Types</h3>
+          <p>Panduan perawatan khusus untuk berbagai jenis rambut, dari lurus hingga keriting.</p>
+          <a href="../beauty.html">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="haircare-tips">
+    <h2>Essential Hair Care Tips</h2>
+    <div class="tips-container">
+      <div class="tip-item">
+        <div class="tip-number">01</div>
+        <div class="tip-content">
+          <h3>Gunakan Kondisioner Setelah Keramas</h3>
+          <p>Kondisioner membantu melembapkan rambut, mengurangi kusut, dan melindungi rambut dari kerusakan. Aplikasikan dari pertengahan rambut hingga ujung.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">02</div>
+        <div class="tip-content">
+          <h3>Kurangi Penggunaan Alat Styling Panas</h3>
+          <p>Penggunaan alat styling panas seperti hair dryer, catokan, dan curling iron secara berlebihan dapat merusak rambut. Gunakan heat protectant sebelum styling.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">03</div>
+        <div class="tip-content">
+          <h3>Potong Rambut Secara Rutin</h3>
+          <p>Potong ujung rambut setiap 6-8 minggu untuk menghilangkan split ends dan menjaga rambut tetap sehat.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">04</div>
+        <div class="tip-content">
+          <h3>Gunakan Hair Mask Seminggu Sekali</h3>
+          <p>Hair mask memberikan nutrisi ekstra dan kelembapan mendalam untuk rambut. Aplikasikan seminggu sekali untuk hasil optimal.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">05</div>
+        <div class="tip-content">
+          <h3>Hindari Keramas dengan Air Panas</h3>
+          <p>Air panas dapat menghilangkan minyak alami rambut dan membuat rambut kering. Gunakan air hangat atau dingin saat keramas.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">06</div>
+        <div class="tip-content">
+          <h3>Pijat Kulit Kepala Saat Keramas</h3>
+          <p>Pijatan lembut pada kulit kepala saat keramas dapat meningkatkan sirkulasi darah dan menstimulasi pertumbuhan rambut.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">07</div>
+        <div class="tip-content">
+          <h3>Gunakan Sisir Berjarak Lebar</h3>
+          <p>Sisir berjarak lebar lebih lembut pada rambut dan mengurangi kerusakan, terutama saat rambut basah dan lebih rentan patah.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">08</div>
+        <div class="tip-content">
+          <h3>Lindungi Rambut dari Sinar Matahari</h3>
+          <p>Sinar UV dapat merusak rambut dan menyebabkan warna memudar. Gunakan produk dengan UV protection atau kenakan topi saat berada di bawah sinar matahari.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bagian Rekomendasi Produk -->
+  <section class="product-recommendations">
+    <div class="section-header">
+      <h2>Rekomendasi Produk Hair Care</h2>
+      <p>Produk-produk terbaik untuk merawat kesehatan dan keindahan rambut Anda</p>
+    </div>
+    
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/7f/33/0a/7f330a03fc7b8987a00fc4221c6a3d84.jpg" alt="Shampoo">
+        </div>
+        <div class="product-info">
+          <h3>Pantene Pro-V Total Damage Care Shampoo</h3>
+          <p class="product-category">Shampoo</p>
+          <p class="product-description">Shampoo yang membantu memperbaiki 10 tanda kerusakan rambut dan membuat rambut lebih kuat.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(1800+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 45.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/08/2f/b0/082fb0b710e6e8386919e5252be422a3.jpg" alt="Conditioner">
+        </div>
+        <div class="product-info">
+          <h3>Dove Intensive Repair Conditioner</h3>
+          <p class="product-category">Kondisioner</p>
+          <p class="product-description">Kondisioner yang memperbaiki kerusakan rambut dan memberikan kelembapan mendalam.</p>
+          <div class="product-rating">
+            <span>★★★★☆</span>
+            <span class="rating-count">(1500+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 55.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/29/c5/ce/29c5ce623ed58ae9f8fde16f579a0ee4.jpg" alt="Hair Mask">
+        </div>
+        <div class="product-info">
+          <h3>L'Oreal Paris Elseve Extraordinary Oil Hair Mask</h3>
+          <p class="product-category">Hair Mask</p>
+          <p class="product-description">Masker rambut dengan 6 minyak bunga langka untuk nutrisi dan kilau ekstra.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(1200+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 85.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/54/a3/44/54a344ec88de6d89b236077ef50cd6a5.jpg" alt="Hair Serum">
+        </div>
+        <div class="product-info">
+          <h3>Ellips Hair Vitamin</h3>
+          <p class="product-category">Hair Serum</p>
+          <p class="product-description">Serum rambut dalam kapsul yang memberikan nutrisi instan dan memperbaiki rambut rusak.</p>
+          <div class="product-rating">
+            <span>★★★★☆</span>
+            <span class="rating-count">(2000+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 15.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/ab/90/b1/ab90b1e81d24396369b5bded0d1e3d14.jpg" alt="Hair Oil">
+        </div>
+        <div class="product-info">
+          <h3>Makarizo Hair Energy Scentsations</h3>
+          <p class="product-category">Hair Oil</p>
+          <p class="product-description">Minyak rambut yang memberikan kilau, nutrisi, dan aroma menyegarkan yang tahan lama.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(1700+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 25.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/a3/28/c3/a328c39392b2d233ef6f086b306d241d.jpg" alt="Heat Protectant">
+        </div>
+        <div class="product-info">
+          <h3>Tresemmé Keratin Smooth Heat Protection Spray</h3>
+          <p class="product-category">Heat Protectant</p>
+          <p class="product-description">Spray pelindung panas yang melindungi rambut dari kerusakan akibat alat styling panas.</p>
+          <div class="product-rating">
+            <span>★★★★☆</span>
+            <span class="rating-count">(950+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 75.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/69/73/24/6973249f9624ff190aa77945f7f490d4.jpg" alt="Dry Shampoo">
+        </div>
+        <div class="product-info">
+          <h3>Batiste Dry Shampoo</h3>
+          <p class="product-category">Dry Shampoo</p>
+          <p class="product-description">Shampoo kering yang menyegarkan rambut dan menghilangkan minyak berlebih tanpa air.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(1300+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 95.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/3c/cb/70/3ccb7029f3ad8bcf14881d86ffd32524.jpg" alt="Hair Spray">
+        </div>
+        <div class="product-info">
+          <h3>L'Oreal Paris Elnett Satin Hairspray</h3>
+          <p class="product-category">Hair Spray</p>
+          <p class="product-description">Hair spray dengan formula ringan yang memberikan hold kuat tanpa membuat rambut kaku.</p>
+          <div class="product-rating">
+            <span>★★★★☆</span>
+            <span class="rating-count">(850+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 120.000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* CSS untuk Bagian Rekomendasi Produk */
+    .product-recommendations {
+      padding: 60px 0;
+      background-color: #f9f5f3;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      color: #e29c8f;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .section-header p {
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .product-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    
+    .product-card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .product-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+    
+    .product-info {
+      padding: 20px;
+    }
+    
+    .product-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    
+    .product-category {
+      color: #e29c8f;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    
+    .product-description {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    
+    .product-rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .product-rating span {
+      color: #ffc107;
+    }
+    
+    .rating-count {
+      color: #888;
+      font-size: 0.8rem;
+      margin-left: 5px;
+    }
+    
+    .product-price {
+      font-weight: 600;
+      color: #d48a7d;
+      font-size: 1.1rem;
+    }
+  </style>
+
+  <section class="newsletter-footer" aria-label="Newsletter subscription">
+    <h3>Get Weekly Beauty &amp; Wellness Tips</h3>
+    <form action="#" method="post" onsubmit="return false;">
+      <input type="email" placeholder="Enter your email" aria-label="Email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p>Join 10,000+ beauty enthusiasts and wellness lovers who get our weekly tips.</p>
+  </section>
+
+  <footer class="menu-footer" role="contentinfo" aria-label="Footer menu">
+    <a href="../index.html">Home</a>
+    <a href="#">FAQ</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact Us</a>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

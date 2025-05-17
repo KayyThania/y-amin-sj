@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makeup Natural untuk Sehari-hari - Beauty Insights</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Ganti CSS untuk header */
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f5f3;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .article-header {
+      text-align: left;
+      margin-bottom: 30px;
+      padding: 40px 0 20px;
+      background-color: #f9f5f3;
+      border-radius: 0;
+    }
+    
+    .article-header h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      color: #e29c8f;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      text-align: left;
+    }
+    
+    .article-meta {
+      color: #888;
+      font-size: 0.9em;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+    
+    .article-meta span {
+      position: relative;
+    }
+    
+    .article-meta span:not(:last-child):after {
+      content: "•";
+      position: absolute;
+      right: -12px;
+    }
+    
+    .article-featured-image {
+      margin: 30px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .article-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .article-header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 40px 0;
+      background-color: #f9f3f0;
+      border-radius: 10px;
+    }
+    
+    .article-header h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+      color: #d48a7d;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .article-meta {
+      color: #888;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    
+    .article-meta span {
+      position: relative;
+    }
+    
+    .article-meta span:not(:last-child):after {
+      content: "•";
+      position: absolute;
+      right: -12px;
+    }
+    
+    .article-featured-image {
+      margin-bottom: 30px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .article-featured-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    
+    .article-featured-image:hover img {
+      transform: scale(1.02);
+    }
+    
+    .article-body {
+      line-height: 1.8;
+      color: #444;
+      font-size: 1.05em;
+    }
+    
+    .article-body h2 {
+      color: #d48a7d;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      border-bottom: 2px solid #f9f3f0;
+      padding-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .article-body h3 {
+      color: #d48a7d;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.4em;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .article-body p {
+      margin-bottom: 20px;
+    }
+    
+    .article-body ul, .article-body ol {
+      margin-bottom: 20px;
+      padding-left: 25px;
+    }
+    
+    .article-body li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+    
+    .article-body ul li::before {
+      content: "•";
+      color: #d48a7d;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    
+    .product-recommendation {
+      background-color: #f9f3f0;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 40px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .product-recommendation h3 {
+      color: #d48a7d;
+      margin-top: 0;
+      text-align: center;
+      font-size: 1.6em;
+      margin-bottom: 25px;
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    
+    .product-card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+    
+    .product-info {
+      padding: 20px;
+    }
+    
+    .product-info h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+    
+    .product-info p {
+      margin: 0;
+      color: #666;
+      font-size: 0.9em;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      height: 4em;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+    
+    .product-price {
+      font-weight: bold;
+      color: #d48a7d;
+      margin-top: 10px;
+      font-size: 1.1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .product-price:after {
+      content: "Lihat Detail →";
+      font-size: 0.8em;
+      color: #888;
+      font-weight: normal;
+    }
+    
+    .video-tutorials {
+      margin: 50px 0;
+    }
+    
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    @media (max-width: 768px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .video-card {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .video-thumbnail {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+    }
+    
+    .video-thumbnail iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    .video-info {
+      padding: 20px;
+      background-color: white;
+    }
+    
+    .video-info h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 1.1em;
+    }
+    
+    .video-info p {
+      margin: 0;
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+    
+    .creator-info {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+    
+    .creator-info img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 2px solid #f9f3f0;
+    }
+    
+    .creator-name {
+      font-size: 0.9em;
+      color: #888;
+    }
+    
+    .back-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #d48a7d;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    .back-button:before {
+      content: "←";
+      position: absolute;
+      left: 0;
+      transition: transform 0.3s ease;
+    }
+    
+    .back-button:hover {
+      transform: translateX(-5px);
+    }
+    
+    .article-tags {
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid #eee;
+    }
+    
+    .article-tags span {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: bold;
+      color: #666;
+    }
+    
+    .article-tags a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 8px 15px;
+      background-color: #f9f3f0;
+      border-radius: 20px;
+      color: #d48a7d;
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+    }
+    
+    .article-tags a:hover {
+      background-color: #f0e0dc;
+      transform: translateY(-2px);
+    }
+    
+    .share-section {
+      margin-top: 40px;
+      text-align: center;
+      background-color: #f9f3f0;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    
+    .share-section h3 {
+      margin-top: 0;
+      color: #d48a7d;
+      margin-bottom: 20px;
+    }
+    
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+    }
+    
+    .share-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .share-button:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .facebook {
+      background-color: #3b5998;
+    }
+    
+    .twitter {
+      background-color: #1da1f2;
+    }
+    
+    .pinterest {
+      background-color: #bd081c;
+    }
+    
+    .whatsapp {
+      background-color: #25d366;
+    }
+    
+    .related-articles {
+      margin-top: 60px;
+    }
+    
+    .related-articles h3 {
+      text-align: center;
+      color: #d48a7d;
+      margin-bottom: 30px;
+      font-size: 1.6em;
+      position: relative;
+    }
+    
+    .related-articles h3:after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      background-color: #f9f3f0;
+      margin: 15px auto 0;
+    }
+    
+    .related-articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    
+    .related-article {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      background-color: white;
+    }
+    
+    .related-article:hover {
+      transform: translateY(-5px);
+    }
+    
+    .related-article img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .related-article:hover img {
+      transform: scale(1.05);
+    }
+    
+    .related-article h4 {
+      padding: 15px 15px 10px;
+      margin: 0;
+      font-size: 1.1em;
+    }
+    
+    .related-article .read-more {
+      display: block;
+      padding: 0 15px 15px;
+      color: #d48a7d;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+    
+    .related-article .read-more:hover {
+      text-decoration: underline;
+    }
+    
+    /* Animasi untuk elemen saat halaman dimuat */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .article-header, .article-featured-image, .article-body h2, .product-recommendation, .video-tutorials, .related-articles {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    
+    .article-body h2:nth-of-type(2) {
+      animation-delay: 0.2s;
+    }
+    
+    .article-body h2:nth-of-type(3) {
+      animation-delay: 0.4s;
+    }
+    
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      .product-grid, .video-grid, .related-articles-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+      
+      .article-header {
+        padding: 30px 15px;
+      }
+      
+      .article-header h1 {
+        font-size: 2em;
+      }
+      
+      .article-body {
+        font-size: 1em;
+      }
+      
+      .article-body h2 {
+        font-size: 1.6em;
+      }
+      
+      .article-body h3 {
+        font-size: 1.3em;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .product-grid, .video-grid, .related-articles-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .article-meta {
+        flex-direction: column;
+        gap: 5px;
+      }
+      
+      .article-meta span:not(:last-child):after {
+        display: none;
+      }
+      
+      .share-buttons {
+        gap: 15px;
+      }
+      
+      .share-button {
+        width: 40px;
+        height: 40px;
+      }
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="article-header">
+      <a href="beauty.html" class="back-button">
+      <h1>Makeup Natural untuk Sehari-hari</h1>
+      <div class="article-meta">
+        <span class="article-date">Dipublikasikan: 18 Oktober 2023</span>
+        <span class="article-category">Kategori: Makeup</span>
+      </div>
+    </header>
+
+    <div class="article-featured-image">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=600&q=80" alt="Natural makeup look">
+    </div>
+    
+    <article class="article-body">
+      <p>Makeup natural adalah teknik makeup yang menekankan pada tampilan yang segar dan alami, seolah-olah Anda tidak menggunakan makeup sama sekali. Teknik ini sangat populer karena memberikan tampilan yang effortless namun tetap meningkatkan fitur alami wajah. Dalam artikel ini, kita akan membahas langkah-langkah, produk, dan tips untuk menciptakan tampilan makeup natural yang sempurna untuk aktivitas sehari-hari.</p>
+      
+      <h2>Mengapa Makeup Natural Menjadi Tren?</h2>
+      <p>Makeup natural telah menjadi tren yang bertahan lama karena beberapa alasan:</p>
+      <ul>
+        <li><strong>Praktis dan Cepat</strong> - Tidak memerlukan banyak produk atau teknik rumit</li>
+        <li><strong>Cocok untuk Semua Kesempatan</strong> - Dari kantor hingga hangout santai</li>
+        <li><strong>Menonjolkan Kecantikan Alami</strong> - Fokus pada peningkatan fitur wajah, bukan mengubahnya</li>
+        <li><strong>Lebih Sehat untuk Kulit</strong> - Penggunaan produk yang lebih ringan memberi ruang untuk kulit bernafas</li>
+        <li><strong>Tampilan Timeless</strong> - Tidak akan pernah ketinggalan zaman</li>
+      </ul>
+      
+      <h2>Persiapan Kulit: Kunci Makeup Natural yang Sempurna</h2>
+      <p>Rahasia utama makeup natural yang cantik adalah kulit yang sehat dan terawat. Sebelum mengaplikasikan makeup, pastikan Anda melakukan rutinitas skincare yang tepat:</p>
+      
+      <h3>1. Bersihkan Wajah</h3>
+      <p>Gunakan pembersih wajah yang sesuai dengan jenis kulit Anda untuk menghilangkan kotoran dan minyak berlebih. Kulit yang bersih akan membuat makeup menempel lebih baik dan tahan lebih lama.</p>
+      
+      <h3>2. Eksfoliasi (1-2 kali seminggu)</h3>
+      <p>Eksfoliasi membantu mengangkat sel kulit mati dan membuat tekstur kulit lebih halus. Ini akan membuat aplikasi foundation lebih merata dan tampak lebih natural.</p>
+      
+      <h3>3. Toner</h3>
+      <p>Toner membantu menyeimbangkan pH kulit dan menyiapkan kulit untuk menyerap produk skincare berikutnya dengan lebih baik.</p>
+      
+      <h3>4. Serum</h3>
+      <p>Pilih serum yang sesuai dengan kebutuhan kulit Anda, seperti serum vitamin C untuk mencerahkan atau serum hyaluronic acid untuk hidrasi.</p>
+      
+      <h3>5. Pelembab</h3>
+      <p>Aplikasikan pelembab yang ringan namun memberikan hidrasi cukup. Kulit yang terhidrasi dengan baik akan membuat makeup terlihat lebih natural dan tidak mudah menggumpal.</p>
+      
+      <h3>6. Sunscreen</h3>
+      <p>Jangan lewatkan sunscreen dengan minimal SPF 30 untuk melindungi kulit dari sinar UV. Pilih formula yang ringan dan tidak meninggalkan white cast.</p>
+      
+      <h2>Langkah-langkah Makeup Natural untuk Sehari-hari</h2>
+      
+      <h3>1. Base Makeup yang Ringan</h3>
+      <p>Untuk tampilan yang natural, hindari foundation dengan coverage tinggi. Sebagai gantinya, gunakan:</p>
+      <ul>
+        <li><strong>BB Cream atau CC Cream</strong> - Memberikan coverage ringan hingga medium dengan tambahan manfaat skincare</li>
+        <li><strong>Tinted Moisturizer</strong> - Opsi yang lebih ringan dari BB cream, cocok untuk kulit yang sudah bagus</li>
+        <li><strong>Foundation Sheer</strong> - Jika Anda lebih suka foundation, pilih formula yang ringan dan buildable</li>
+      </ul>
+      
+      <p>Aplikasikan dengan beauty blender atau jari untuk hasil yang lebih natural. Fokus pada area yang membutuhkan coverage, seperti area T-zone, dan blend ke arah luar.</p>
+      
+      <h3>2. Concealer Tepat Sasaran</h3>
+      <p>Alih-alih mengaplikasikan concealer di seluruh wajah, gunakan hanya pada area yang membutuhkan:</p>
+      <ul>
+        <li>Lingkaran hitam di bawah mata</li>
+        <li>Kemerahan atau jerawat</li>
+        <li>Area di sekitar hidung yang cenderung kemerahan</li>
+      </ul>
+      
+      <p>Pilih concealer dengan warna yang sesuai dengan skin tone Anda. Untuk area bawah mata, pilih shade yang sedikit lebih terang, sedangkan untuk menutupi jerawat, gunakan shade yang sama persis dengan warna kulit Anda.</p>
+      
+      <h3>3. Setting dengan Bedak Tabur</h3>
+      <p>Gunakan bedak tabur transparan untuk menyerap minyak berlebih dan mengunci foundation. Aplikasikan dengan brush besar dan hindari penggunaan yang berlebihan agar tidak terlihat cakey. Fokus pada area T-zone yang cenderung berminyak.</p>
+      
+      <h3>4. Definisikan Alis</h3>
+      <p>Alis yang rapi dapat membingkai wajah dengan sempurna. Untuk tampilan natural:</p>
+      <ul>
+        <li>Gunakan pensil alis atau eyebrow powder dengan warna yang sesuai dengan rambut Anda</li>
+        <li>Isi bagian yang kosong dengan gerakan ringan menyerupai bulu alis</li>
+        <li>Sisir dengan spoolie untuk hasil yang lebih natural</li>
+        <li>Jika diperlukan, gunakan eyebrow gel untuk menjaga bentuk alis sepanjang hari</li>
+      </ul>
+      
+      <h3>5. Eyeshadow Netral</h3>
+      <p>Untuk makeup mata natural:</p>
+      <ul>
+        <li>Pilih warna-warna netral seperti coklat muda, peach, atau champagne</li>
+        <li>Aplikasikan warna yang lebih terang di kelopak mata</li>
+        <li>Gunakan warna yang sedikit lebih gelap di lipatan mata untuk dimensi</li>
+        <li>Blend dengan baik untuk menghindari garis yang terlihat jelas</li>
+      </ul>
+      
+      <h3>6. Eyeliner Tipis (Opsional)</h3>
+      <p>Jika Anda ingin menggunakan eyeliner, pilih pensil atau gel eyeliner berwarna coklat dan aplikasikan tipis di garis bulu mata atas. Untuk tampilan yang lebih natural, gunakan eyeshadow gelap sebagai pengganti eyeliner dengan aplikator miring.</p>
+      
+      <h3>7. Mascara</h3>
+      <p>Aplikasikan mascara tipis-tipis untuk membuka mata. Untuk hasil yang lebih natural:</p>
+      <ul>
+        <li>Gunakan warna coklat alih-alih hitam</li>
+        <li>Fokus pada akar bulu mata dan gerakkan ke atas</li>
+        <li>Hindari aplikasi berlebihan yang dapat membuat bulu mata menggumpal</li>
+        <li>Gunakan eyelash curler sebelum aplikasi mascara untuk membuka mata</li>
+      </ul>
+      
+      <h3>8. Blush yang Subtle</h3>
+      <p>Pilih warna blush yang mirip dengan warna alami pipi Anda saat merona:</p>
+      <ul>
+        <li>Untuk kulit fair-light: pink muda atau peach</li>
+        <li>Untuk kulit medium: coral atau peach kecoklatan</li>
+        <li>Untuk kulit tan-deep: berry, mauve, atau terracotta</li>
+      </ul>
+      
+      <p>Aplikasikan dengan ringan di area apel pipi dan blend ke arah tulang pipi. Untuk tampilan yang lebih natural, gunakan cream blush yang akan menyatu dengan kulit.</p>
+      
+      <h3>9. Highlight Minimalis</h3>
+      <p>Gunakan highlighter dengan shimmer halus pada:</p>
+      <ul>
+        <li>Puncak tulang pipi</li>
+        <li>Tengah hidung</li>
+        <li>Bagian cupid's bow</li>
+        <li>Sedikit di bawah alis</li>
+      </ul>
+      
+      <p>Pilih highlighter dengan finish dewy alih-alih glitter untuk tampilan yang lebih natural.</p>
+      
+      <h3>10. Lipstik MLBB (My Lips But Better)</h3>
+      <p>Pilih lipstik atau lip tint dengan warna yang mirip dengan warna alami bibir Anda, hanya sedikit lebih intens. Warna nude, peach, atau pink muda biasanya menjadi pilihan yang baik.</p>
+      
+      <p>Untuk tampilan yang lebih natural, aplikasikan dengan menepuk-nepuk jari alih-alih langsung dari tube. Anda juga bisa menggunakan lip balm berwarna untuk tampilan yang lebih casual.</p>
+      
+      <h2>Tips Tambahan untuk Makeup Natural</h2>
+      <ul>
+        <li><strong>Selalu blend dengan baik</strong> untuk menghindari garis makeup yang terlihat jelas</li>
+        <li><strong>Gunakan brush dan alat yang tepat</strong> untuk aplikasi yang lebih presisi</li>
+        <li><strong>Kurang lebih baik daripada berlebihan</strong> - Anda selalu bisa menambahkan produk jika diperlukan</li>
+        <li><strong>Sesuaikan dengan warna kulit dan undertone Anda</strong> untuk hasil yang lebih natural</li>
+        <li><strong>Gunakan setting spray</strong> untuk membuat makeup tahan lama dan terlihat lebih menyatu dengan kulit</li>
+        <li><strong>Perhatikan pencahayaan</strong> saat mengaplikasikan makeup - cahaya natural adalah yang terbaik</li>
+      </ul>
+      
+      <h2>Rekomendasi Produk untuk Makeup Natural</h2>
+      <div class="product-recommendation">
+        <h3>Produk-produk Terbaik untuk Makeup Natural</h3>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://i.pinimg.com/736x/c6/15/99/c61599cef92ccbb169fac94e6653621f.jpg" alt="BB Cream">
+            <div class="product-info">
+              <h4>Innisfree Light Fitting Foundation</h4>
+              <p>foundation bertekstur ringan dengan hasil akhir natural dan halus, dilengkapi SPF20 PA++</p>
+              <div class="product-price">Rp375.000</div>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <img src="https://i.pinimg.com/736x/ef/30/09/ef3009944baf06430ec18b6d18dbd7c4.jpg" alt="Concealer">
+            <div class="product-info">
+              <h4>Maybelline Fit Me Concealer</h4>
+              <p>Concealer medium coverage yang buildable dan natural</p>
+              <div class="product-price">Rp 120.000</div>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <img src="https://i.pinimg.com/736x/36/29/86/3629863157103ee0ef5801703bc9c755.jpg" alt="Eyeshadow Palette">
+            <div class="product-info">
+              <h4>peripera - All Take Mood Like Palette Peritage Collection</h4>
+              <p>eyeshadow palette dengan 8 warna kombinasi matte, shimmer, dan glitter. Terdapat juga motif love-heart timbul di tengah palet yang khas dari edisi Peritage Collection.</p>
+              <div class="product-price">Rp 250.000</div>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <img src="https://i.pinimg.com/736x/b6/34/8b/b6348b027609f5fe846a50508ea81cc2.jpg" alt="Cream Blush">
+            <div class="product-info">
+              <h4>rom&nd Glasting Melting Balm 3.5g (07 MAUVE WHIP)</h4>
+              <p>lip balm vegan dengan hasil akhir glossy dan warna yang buildable</p>
+              <div class="product-price">Rp 225.000</div>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <img src="https://i.pinimg.com/736x/0b/35/11/0b3511d5cb036f36249699dce9ca0fc4.jpg" alt="Lip Tint">
+            <div class="product-info">
+              <h4>Somethinc Copy Paste Tinted Sunscreen SPF 40 PA++++</h4>
+              <p>produk hybrid yang menggabungkan manfaat sunscreen dan skin tint dalam satu formula ringan.</p>
+              <div class="product-price">Rp 174.900</div>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <img src="https://i.pinimg.com/736x/96/e5/8a/96e58aff65c824df43b76153a5954788.jpg" alt="Setting Spray">
+            <div class="product-info">
+              <h4>Pixi On-the-Glow Blush</h4>
+              <p>Blush krim dalam bentuk stik yang praktis, memberikan warna alami dan dapat digunakan di pipi maupun bibir</p>
+              <div class="product-price">Rp 548.214</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="video-tutorials">
+        <h3>Tutorial Video Makeup Natural</h3>
+        <p>Ingin melihat langsung bagaimana cara mengaplikasikan makeup natural? Berikut adalah beberapa tutorial video terbaik dari beauty influencer Indonesia dan internasional:</p>
+        
+        <div class="video-grid">
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <iframe src="https://www.youtube.com/embed/f-SZA1tkViU" title="Makeup Natural untuk Sehari-hari oleh Tasya Farasya" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <h4>Makeup Natural untuk Sehari-hari</h4>
+              <p>Tutorial makeup natural yang cocok untuk kulit Indonesia</p>
+              <div class="creator-info">
+                <img src="https://yt3.googleusercontent.com/ytc/APkrFKbL6KCUigL_Sm8RUaBB5RKzHJCKVLdJQvngFgAu=s176-c-k-c0x00ffffff-no-rj" alt="Tasya Farasya">
+                <span class="creator-name">Tasya Farasya</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <iframe src="https://www.youtube.com/embed/DAu_jF-9AXs" title="Everyday Makeup Routine oleh Abel Cantika" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <h4>Everyday Makeup Routine</h4>
+              <p>Makeup natural untuk aktivitas sehari-hari yang praktis</p>
+              <div class="creator-info">
+                <img src="https://yt3.googleusercontent.com/ytc/APkrFKYkn9U9LVGIGPKzKpP8pUI2FHoc3cKwIcRdWYUU=s176-c-k-c0x00ffffff-no-rj" alt="Abel Cantika">
+                <span class="creator-name">Abel Cantika</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h2>Variasi Makeup Natural untuk Berbagai Kesempatan</h2>
+      
+      <h3>Makeup Natural untuk Kantor</h3>
+      <p>Untuk lingkungan kerja profesional, Anda ingin tampil rapi dan polished namun tetap natural:</p>
+      <ul>
+        <li>Gunakan foundation dengan coverage medium untuk tampilan yang lebih polished</li>
+        <li>Pilih eyeshadow matte dalam warna netral seperti taupe atau soft brown</li>
+        <li>Gunakan eyeliner tipis untuk definisi mata yang lebih jelas</li>
+        <li>Pilih lipstik dalam warna MLBB yang tidak terlalu mencolok</li>
+        <li>Pastikan blush diaplikasikan dengan subtle untuk tampilan yang profesional</li>
+      </ul>
+      
+      <h3>Makeup Natural untuk Kuliah/Sekolah</h3>
+      <p>Untuk aktivitas belajar, Anda ingin tampilan yang fresh dan effortless:</p>
+      <ul>
+        <li>Gunakan BB cream atau tinted moisturizer untuk coverage ringan</li>
+        <li>Skip eyeshadow atau gunakan hanya satu warna di kelopak mata</li>
+        <li>Fokus pada mascara untuk membuka mata</li>
+        <li>Gunakan lip tint atau lip balm berwarna untuk tampilan yang casual</li>
+        <li>Aplikasikan cream blush untuk efek flush yang natural</li>
+      </ul>
+      
+      <h3>Makeup Natural untuk Hangout</h3>
+      <p>Untuk bertemu teman atau casual date, Anda bisa sedikit lebih playful:</p>
+      <ul>
+        <li>Tetap gunakan base makeup ringan</li>
+        <li>Tambahkan sedikit shimmer di kelopak mata untuk dimensi</li>
+        <li>Gunakan highlighter sedikit lebih terang untuk glow yang lebih terlihat</li>
+        <li>Pilih warna lip tint atau lipstik yang sedikit lebih berani, seperti coral atau berry</li>
+        <li>Aplikasikan blush sedikit lebih intens untuk tampilan yang lebih segar</li>
+      </ul>
+      
+      <h2>Makeup Natural untuk Berbagai Jenis Kulit</h2>
+      
+      <h3>Untuk Kulit Berminyak</h3>
+      <p>Kulit berminyak membutuhkan pendekatan khusus agar makeup tetap tahan lama:</p>
+      <ul>
+        <li>Gunakan primer mattifying sebelum foundation</li>
+        <li>Pilih foundation oil-free atau matte finish</li>
+        <li>Set dengan bedak tabur yang mengandung silica untuk mengontrol minyak</li>
+        <li>Gunakan blotting paper sepanjang hari untuk menyerap minyak berlebih</li>
+        <li>Pilih produk waterproof untuk area mata</li>
+        <li>Bawa setting spray mattifying untuk touch-up</li>
+      </ul>
+      
+      <h3>Untuk Kulit Kering</h3>
+      <p>Kulit kering membutuhkan hidrasi ekstra agar makeup tidak terlihat kering atau patchy:</p>
+      <ul>
+        <li>Gunakan primer hydrating sebelum foundation</li>
+        <li>Pilih foundation dengan finish dewy atau satin</li>
+        <li>Hindari bedak berlebihan, gunakan hanya di area T-zone</li>
+        <li>Gunakan cream blush dan cream highlighter alih-alih produk powder</li>
+        <li>Semprotkan setting spray hydrating setelah makeup selesai</li>
+        <li>Bawa face mist untuk menyegarkan makeup sepanjang hari</li>
+      </ul>
+      
+      <h3>Untuk Kulit Sensitif</h3>
+      <p>Kulit sensitif membutuhkan produk yang gentle dan non-irritating:</p>
+      <ul>
+        <li>Pilih produk hypoallergenic dan bebas pewangi</li>
+        <li>Lakukan patch test untuk produk baru</li>
+        <li>Hindari produk dengan alkohol tinggi atau bahan iritan lainnya</li>
+        <li>Gunakan mineral makeup yang lebih lembut untuk kulit</li>
+        <li>Pilih produk dengan bahan menenangkan seperti aloe vera atau chamomile</li>
+      </ul>
+      
+      <h2>Kesalahan Umum dalam Makeup Natural</h2>
+      <p>Hindari kesalahan-kesalahan ini untuk hasil makeup natural yang sempurna:</p>
+      
+      <h3>1. Menggunakan Foundation Terlalu Tebal</h3>
+      <p>Foundation yang terlalu tebal akan membuat wajah terlihat seperti memakai topeng. Mulailah dengan lapisan tipis dan tambahkan hanya di area yang membutuhkan coverage lebih.</p>
+      
+      <h3>2. Contouring yang Terlalu Dramatis</h3>
+      <p>Untuk makeup natural, hindari contouring yang terlalu tegas. Gunakan bronzer dengan ringan untuk memberikan dimensi subtle pada wajah.</p>
+      
+      <h3>3. Alis yang Terlalu Digambar</h3>
+      <p>Alis yang terlalu digambar atau terlalu gelap akan membuat tampilan keseluruhan terlihat tidak natural. Fokus pada mengisi bagian yang kosong dan merapikan bentuk alami alis Anda.</p>
+      
+      <h3>4. Blending yang Kurang Sempurna</h3>
+      <p>Garis makeup yang terlihat jelas adalah musuh utama tampilan natural. Pastikan untuk selalu blend foundation, blush, eyeshadow, dan produk lainnya dengan baik.</p>
+      
+      <h3>5. Mengabaikan Warna Kulit</h3>
+      <p>Menggunakan produk yang tidak sesuai dengan warna kulit dan undertone akan membuat makeup terlihat tidak natural. Pastikan untuk memilih shade yang tepat untuk foundation, concealer, dan produk lainnya.</p>
+      
+      <h2>Kesimpulan</h2>
+      <p>Makeup natural adalah tentang meningkatkan kecantikan alami Anda, bukan mengubahnya. Dengan teknik yang tepat dan produk yang sesuai, Anda dapat menciptakan tampilan yang segar dan effortless untuk sehari-hari.</p>
+      
+      <p>Ingat, kunci makeup natural yang sempurna adalah kulit yang sehat dan terawat. Jadi, jangan lupakan rutinitas skincare Anda dan selalu bersihkan makeup dengan bersih sebelum tidur.</p>
+      
+      <p>Selamat mencoba dan temukan versi terbaik dari diri Anda dengan makeup natural!</p>
+    </article>
+    </div>
+    </article>
+    </main>
+    
+    <section class="newsletter-footer" aria-label="Newsletter subscription">
+    <h3>Dapatkan Tips Kecantikan &amp; Kesehatan Mingguan</h3>
+    <form action="#" method="post" onsubmit="return false;">
+    <input type="email" placeholder="Masukkan email Anda" aria-label="Alamat email" required />
+    <button type="submit">Berlangganan</button>
+    </form>
+    <p>Bergabunglah dengan 10.000+ penggemar kecantikan dan pecinta kesehatan yang mendapatkan tips mingguan kami.</p>
+    </section>
+    
+    <footer class="menu-footer" role="contentinfo" aria-label="Footer menu">
+    <a href="index.html">Beranda</a>
+    <a href="#">FAQ</a>
+    <a href="#">Kebijakan Privasi</a>
+    <a href="#">Hubungi Kami</a>
+    </footer>
+    
+  

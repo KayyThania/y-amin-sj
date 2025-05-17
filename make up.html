@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makeup - Beauty & Self-Growth</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* CSS Khusus untuk Halaman Makeup */
+    .makeup-header {
+      background-color: #f9f5f3;
+      padding: 60px 0;
+      text-align: center;
+    }
+    
+    .makeup-header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #e29c8f;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .makeup-header p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: #666;
+    }
+    
+    .makeup-categories {
+      padding: 50px 0;
+      background-color: #fff;
+    }
+    
+    .category-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    
+    .makeup-card {
+      background-color: #f9f5f3;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .makeup-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .makeup-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .makeup-card-content {
+      padding: 20px;
+    }
+    
+    .makeup-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 10px;
+    }
+    
+    .makeup-card p {
+      color: #666;
+      margin-bottom: 15px;
+      min-height: 60px;
+    }
+    
+    .makeup-card a {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #e29c8f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .makeup-card a:hover {
+      background-color: #d48a7d;
+    }
+    
+    .featured-looks {
+      padding: 50px 0;
+      background-color: #f9f5f3;
+    }
+    
+    .featured-looks h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 40px;
+    }
+    
+    .looks-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    
+    .look-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .look-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .look-content {
+      padding: 20px;
+    }
+    
+    .look-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 10px;
+    }
+    
+    .look-card p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    
+    .look-card a {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #e29c8f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .look-card a:hover {
+      background-color: #d48a7d;
+    }
+    
+    .makeup-tips {
+      padding: 50px 0;
+      background-color: #fff;
+    }
+    
+    .makeup-tips h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 40px;
+    }
+    
+    .tips-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .tip-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #f9f5f3;
+      border-radius: 10px;
+    }
+    
+    .tip-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #e29c8f;
+      margin-right: 20px;
+      min-width: 50px;
+    }
+    
+    .tip-content h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 10px;
+    }
+    
+    .tip-content p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Beauty &amp; Self-Growth</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="self growth.html">Self Growth</a>
+      <a href="community.html">Community</a>
+      <a href="about Us.html">About Us</a>
+    </nav>
+    <div class="search-box">
+      <input type="text" placeholder="Search in site" aria-label="Search in site" />
+    </div>
+  </header>
+
+  <section class="makeup-header">
+    <h1>Makeup</h1>
+    <p>Learn techniques, trends, and product recommendations for all skill levels.</p>
+  </section>
+
+  <section class="makeup-categories">
+    <div class="category-container">
+      <div class="makeup-card">
+        <img src="https://i.pinimg.com/736x/73/ee/9d/73ee9d038078bd75a619e311b14089db.jpg" alt="Natural Makeup">
+        <div class="makeup-card-content">
+          <h3>Natural Makeup</h3>
+          <p>Panduan makeup natural yang mudah dan cepat untuk tampilan sehari-hari yang tetap terlihat segar.</p>
+          <a href="../beauty.html" class="read-more" data-article="natural-makeup">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="makeup-card">
+        <img src="https://i.pinimg.com/736x/16/f3/99/16f3997ae53c3c27d2afb20c54dc9bf7.jpg" alt="Glam Makeup">
+        <div class="makeup-card-content">
+          <h3>Glam Makeup</h3>
+          <p>Tutorial makeup glamor untuk acara spesial dan malam hari yang membuat Anda menjadi pusat perhatian.</p>
+          <a href="../beauty.html" class="read-more" data-article="natural-makeup">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="makeup-card">
+        <img src="https://i.pinimg.com/736x/b6/fa/34/b6fa34ee5e4e09a37b63bd6105dfb57d.jpg" alt="Eye Makeup">
+        <div class="makeup-card-content">
+          <h3>Eye Makeup</h3>
+          <p>Teknik dan tips untuk membuat mata Anda terlihat lebih ekspresif dan menarik.</p>
+          <a href="../beauty.html" class="read-more" data-article="natural-makeup">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="makeup-card">
+        <img src="https://i.pinimg.com/736x/76/b8/f2/76b8f20c1724a8288afb1608c14394b0.jpg" alt="Lip Makeup">
+        <div class="makeup-card-content">
+          <h3>Lip Makeup</h3>
+          <p>Panduan lengkap untuk bibir sempurna, dari pemilihan warna hingga teknik aplikasi.</p>
+          <a href="../beauty.html" class="read-more" data-article="natural-makeup">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="makeup-card">
+        <img src="https://i.pinimg.com/736x/9b/d3/76/9bd376204498e61ac631a8ed57b9288b.jpg" alt="Base Makeup">
+        <div class="makeup-card-content">
+          <h3>Base Makeup</h3>
+          <p>Tips untuk foundation dan concealer yang flawless dan tahan lama sepanjang hari.</p>
+          <a href="../beauty.html" class="read-more" data-article="natural-makeup">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="makeup-card">
+        <img src="https://i.pinimg.com/736x/b7/26/20/b7262026efb983b2521fa583d2933a6e.jpg" alt="Makeup for Beginners">
+        <div class="makeup-card-content">
+          <h3>Makeup for Beginners</h3>
+          <p>Panduan langkah demi langkah untuk pemula yang ingin belajar dasar-dasar makeup.</p>
+          <a href="../beauty.html" class="read-more" data-article="natural-makeup">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-looks">
+    <h2>Featured Makeup Looks</h2>
+    <div class="looks-container">
+      <div class="look-card">
+        <img src="https://i.pinimg.com/736x/fc/b7/19/fcb7195eed6c230ecc0a6ddbb2357150.jpg" alt="Everyday Natural Look">
+        <div class="look-content">
+          <h3>Everyday Natural Look</h3>
+          <p>Tampilan makeup natural yang cocok untuk aktivitas sehari-hari, kantor, atau kuliah.</p>
+          <a href="../beauty.html">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="look-card">
+        <img src="https://i.pinimg.com/736x/8d/17/24/8d172416bc69af3b0dcbb05ec3d5c514.jpg" alt="Soft Glam Look">
+        <div class="look-content">
+          <h3>Soft Glam Look</h3>
+          <p>Tampilan glamor yang lembut dan elegan untuk acara formal atau dinner.</p>
+          <a href="../beauty.html">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="look-card">
+        <img src="https://i.pinimg.com/736x/94/9a/75/949a755708b6f42fa8a7fe1164566e53.jpg" alt="Bold Colorful Look">
+        <div class="look-content">
+          <h3>Bold Colorful Look</h3>
+          <p>Tampilan berani dengan warna-warna cerah untuk acara khusus atau pesta.</p>
+          <a href="../beauty.html">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="makeup-tips">
+    <h2>Essential Makeup Tips</h2>
+    <div class="tips-container">
+      <div class="tip-item">
+        <div class="tip-number">01</div>
+        <div class="tip-content">
+          <h3>Selalu Gunakan Primer</h3>
+          <p>Primer membantu makeup bertahan lebih lama dan membuat kulit terlihat lebih halus. Pilih primer sesuai dengan jenis kulit Anda.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">02</div>
+        <div class="tip-content">
+          <h3>Investasi pada Kuas yang Berkualitas</h3>
+          <p>Kuas yang baik akan membuat aplikasi makeup lebih mudah dan hasil yang lebih baik. Bersihkan kuas secara teratur.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">03</div>
+        <div class="tip-content">
+          <h3>Sesuaikan Foundation dengan Warna Kulit</h3>
+          <p>Tes foundation di bagian rahang untuk memastikan warnanya cocok dengan warna kulit Anda.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">04</div>
+        <div class="tip-content">
+          <h3>Gunakan Teknik Blending</h3>
+          <p>Blending adalah kunci untuk hasil makeup yang natural. Gunakan kuas atau beauty blender untuk hasil yang mulus.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">05</div>
+        <div class="tip-content">
+          <h3>Aplikasikan Concealer dengan Benar</h3>
+          <p>Gunakan concealer setelah foundation untuk coverage yang lebih baik. Tepuk-tepuk lembut, jangan digosok.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">06</div>
+        <div class="tip-content">
+          <h3>Set Makeup dengan Setting Spray</h3>
+          <p>Setting spray membantu makeup bertahan lebih lama dan mencegah makeup terlihat kering atau cakey.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">07</div>
+        <div class="tip-content">
+          <h3>Perhatikan Pencahayaan</h3>
+          <p>Aplikasikan makeup di tempat dengan pencahayaan yang baik untuk hasil yang akurat.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">08</div>
+        <div class="tip-content">
+          <h3>Jangan Lupa Alis</h3>
+          <p>Alis yang rapi dapat membingkai wajah dengan baik. Gunakan produk alis yang sesuai dengan warna rambut Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bagian Rekomendasi Produk -->
+  <section class="product-recommendations">
+    <div class="section-header">
+      <h2>Rekomendasi Produk Makeup</h2>
+      <p>Produk-produk terbaik yang direkomendasikan oleh para ahli kecantikan</p>
+    </div>
+    
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/57/e1/06/57e106f2a02160d183f8459494dcc294.jpg" alt="Foundation">
+        </div>
+        <div class="product-info">
+          <h3>Maybelline Fit Me Foundation</h3>
+          <p class="product-category">Foundation</p>
+          <p class="product-description">Foundation ringan dengan hasil matte yang tahan lama dan cocok untuk kulit berminyak.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(1200+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 150.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/c2/1a/f5/c21af52e797fe659738b45e8913f4592.jpg" alt="Lipstick">
+        </div>
+        <div class="product-info">
+          <h3>Wardah Exclusive Matte Lip Cream</h3>
+          <p class="product-category">Lipstick</p>
+          <p class="product-description">Lip cream dengan hasil matte yang nyaman dipakai sepanjang hari dan tidak membuat bibir kering.</p>
+          <div class="product-rating">
+            <span>★★★★☆</span>
+            <span class="rating-count">(950+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 60.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/57/5a/e1/575ae161d8c6d6f33c306a1d01865e41.jpg" alt="Mascara">
+        </div>
+        <div class="product-info">
+          <h3>Somethinc Tipsy Lash Lift Mascara</h3>
+          <p class="product-category">Mascara</p>
+          <p class="product-description">Mascara waterproof yang memberikan volume dan lentikan maksimal pada bulu mata.</p>
+          <div class="product-rating">
+            <span>★★★★☆</span>
+            <span class="rating-count">(800+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 90.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/92/4a/ec/924aec9d66970eac8632a402a9b53289.jpg" alt="Eyeshadow Palette">
+        </div>
+        <div class="product-info">
+          <h3>Focallure Eyeshadow Palette</h3>
+          <p class="product-category">Eyeshadow</p>
+          <p class="product-description">Palet eyeshadow dengan 9 warna yang pigmented dan mudah di-blend untuk berbagai look.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(650+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 120.000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* CSS untuk Bagian Rekomendasi Produk */
+    .product-recommendations {
+      padding: 60px 0;
+      background-color: #f9f5f3;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      color: #e29c8f;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .section-header p {
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .product-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    
+    .product-card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .product-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+    
+    .product-info {
+      padding: 20px;
+    }
+    
+    .product-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    
+    .product-category {
+      color: #e29c8f;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    
+    .product-description {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    
+    .product-rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .product-rating span {
+      color: #ffc107;
+    }
+    
+    .rating-count {
+      color: #888;
+      font-size: 0.8rem;
+      margin-left: 5px;
+    }
+    
+    .product-price {
+      font-weight: 600;
+      color: #d48a7d;
+      font-size: 1.1rem;
+    }
+  </style>
+</body>
+
+  <section class="newsletter-footer" aria-label="Newsletter subscription">
+    <h3>Get Weekly Beauty &amp; Wellness Tips</h3>
+    <form action="#" method="post" onsubmit="return false;">
+      <input type="email" placeholder="Enter your email" aria-label="Email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p>Join 10,000+ beauty enthusiasts and wellness lovers who get our weekly tips.</p>
+  </section>
+
+  <footer class="menu-footer" role="contentinfo" aria-label="Footer menu">
+    <a href="../index.html">Home</a>
+    <a href="#">FAQ</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact Us</a>
+  </footer>
+
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      position: relative;
+    }
+    .close-btn {
+      color: #aaa;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close-btn:hover,
+    .close-btn:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- Modal Structure -->
+  <div id="articleModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+    <div class="modal-content">
+      <span class="close-btn" aria-label="Close modal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <!-- Hidden Article Database -->
+  <div id="articleDatabase" style="display:none;">
+    <div data-article="natural-makeup">
+      <h2>Natural Makeup</h2>
+      <p>Panduan makeup natural yang mudah dan cepat untuk tampilan sehari-hari yang tetap terlihat segar.</p>
+      <p>Gunakan foundation ringan, concealer, dan blush on dengan warna natural. Fokus pada tampilan kulit yang sehat dan bercahaya.</p>
+    </div>
+    <div data-article="glam-makeup">
+      <h2>Glam Makeup</h2>
+      <p>Tutorial makeup glamor untuk acara spesial dan malam hari yang membuat Anda menjadi pusat perhatian.</p>
+      <p>Gunakan eyeshadow berwarna gelap, eyeliner tebal, dan lipstik bold untuk tampilan yang dramatis dan elegan.</p>
+    </div>
+    <div data-article="eye-makeup">
+      <h2>Eye Makeup</h2>
+      <p>Teknik dan tips untuk membuat mata Anda terlihat lebih ekspresif dan menarik.</p>
+      <p>Gunakan eyeshadow dengan gradasi warna, eyeliner winged, dan maskara untuk menonjolkan bentuk mata.</p>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

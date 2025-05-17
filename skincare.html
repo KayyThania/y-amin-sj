@@ -1,0 +1,639 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skincare - Beauty & Self-Growth</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* CSS Khusus untuk Halaman Skincare */
+    .skincare-header {
+      background-color: #f9f5f3;
+      padding: 60px 0;
+      text-align: center;
+    }
+    
+    .skincare-header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #e29c8f;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .skincare-header p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: #666;
+    }
+    
+    .skincare-categories {
+      padding: 50px 0;
+      background-color: #fff;
+    }
+    
+    .category-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    
+    .skincare-card {
+      background-color: #f9f5f3;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .skincare-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .skincare-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .skincare-card-content {
+      padding: 20px;
+    }
+    
+    .skincare-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 10px;
+    }
+    
+    .skincare-card p {
+      color: #666;
+      margin-bottom: 15px;
+      min-height: 60px;
+    }
+    
+    .skincare-card a {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #e29c8f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .skincare-card a:hover {
+      background-color: #d48a7d;
+    }
+    
+    .featured-routines {
+      padding: 50px 0;
+      background-color: #f9f5f3;
+    }
+    
+    .featured-routines h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 40px;
+    }
+    
+    .routine-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    
+    .routine-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .routine-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .routine-content {
+      padding: 20px;
+    }
+    
+    .routine-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 10px;
+    }
+    
+    .routine-card p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    
+    .routine-card a {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #e29c8f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .routine-card a:hover {
+      background-color: #d48a7d;
+    }
+    
+    .skincare-tips {
+      padding: 50px 0;
+      background-color: #fff;
+    }
+    
+    .skincare-tips h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 40px;
+    }
+    
+    .tips-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .tip-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #f9f5f3;
+      border-radius: 10px;
+    }
+    
+    .tip-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #e29c8f;
+      margin-right: 20px;
+      min-width: 50px;
+    }
+    
+    .tip-content h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 10px;
+    }
+    
+    .tip-content p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Beauty &amp; Self-Growth</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../beauty.html">Beauty</a>
+      <a href="../self growth.html">Self Growth</a>
+      <a href="../community.html">Community</a>
+      <a href="../about Us.html">About Us</a>
+    </nav>
+    <div class="search-box">
+      <input type="text" placeholder="Search in site" aria-label="Search in site" />
+    </div>
+  </header>
+
+  <section class="skincare-header">
+    <h1>Skincare</h1>
+    <p>Discover routines, products, and tips for healthy, glowing skin.</p>
+  </section>
+
+  <section class="skincare-categories">
+    <div class="category-container">
+      <div class="skincare-card">
+        <img src="https://i.pinimg.com/736x/06/13/98/061398e20e5bed2476071448461d47b5.jpg" alt="Skincare Routines">
+        <div class="skincare-card-content">
+          <h3>Skincare Routines</h3>
+          <p>Panduan lengkap untuk membangun rutinitas skincare yang sesuai dengan kebutuhan kulit Anda.</p>
+          <a href="../beauty.html" class="read-more" data-article="skincare-routine">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="skincare-card">
+        <img src="https://i.pinimg.com/736x/b1/fb/64/b1fb641cbbc96bbc40ac2a0f4ebe01ab.jpg" alt="Korean Skincare">
+        <div class="skincare-card-content">
+          <h3>Korean Skincare</h3>
+          <p>Rahasia kulit glowing ala Korea yang bisa kamu terapkan dalam 10 langkah sederhana.</p>
+          <a href="../beauty.html" class="read-more" data-article="korean-skincare">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="skincare-card">
+        <img src="https://i.pinimg.com/736x/00/a0/01/00a0010fc212dce865ec30b7e1f71d74.jpg" alt="Natural Skincare">
+        <div class="skincare-card-content">
+          <h3>Natural Skincare</h3>
+          <p>Produk dan bahan alami untuk perawatan kulit yang lembut dan ramah lingkungan.</p>
+          <a href="../beauty.html" class="read-more" data-article="diy-face-masks">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="skincare-card">
+        <img src="https://i.pinimg.com/736x/39/ad/1c/39ad1c0569d283d7b24c6a456b01f91d.jpg" alt="Acne Treatment">
+        <div class="skincare-card-content">
+          <h3>Acne Treatment</h3>
+          <p>Cara efektif mengatasi jerawat dan mencegah kemunculannya kembali.</p>
+          <a href="../beauty.html" class="read-more" data-article="diy-face-masks">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <!-- Tambahan 2 kartu baru -->
+      <div class="skincare-card">
+        <img src="https://i.pinimg.com/736x/25/f3/44/25f34485c51d1a5866d3ac32dd534c0f.jpg" alt="Anti-Aging Skincare">
+        <div class="skincare-card-content">
+          <h3>Anti-Aging Skincare</h3>
+          <p>Panduan lengkap untuk mencegah dan mengatasi tanda-tanda penuaan pada kulit.</p>
+          <a href="../beauty.html" class="read-more" data-article="diy-face-masks">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="skincare-card">
+        <img src="https://i.pinimg.com/736x/65/29/5b/65295b8e4bb8492b822b4c7cf4da60af.jpg" alt="Skincare for Sensitive Skin">
+        <div class="skincare-card-content">
+          <h3>Skincare for Sensitive Skin</h3>
+          <p>Tips dan rekomendasi produk untuk kulit sensitif yang mudah iritasi.</p>
+          <a href="../beauty.html" class="read-more" data-article="diy-face-masks">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skincare-tips">
+    <h2>Essential Skincare Tips</h2>
+    <div class="tips-container">
+      <div class="tip-item">
+        <div class="tip-number">01</div>
+        <div class="tip-content">
+          <h3>Gunakan Sunscreen Setiap Hari</h3>
+          <p>Tabir surya adalah langkah terpenting dalam rutinitas skincare. Gunakan SPF minimal 30 setiap hari, bahkan saat mendung atau di dalam ruangan.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">02</div>
+        <div class="tip-content">
+          <h3>Double Cleansing di Malam Hari</h3>
+          <p>Gunakan pembersih berbasis minyak diikuti dengan pembersih berbasis air untuk menghilangkan makeup, sunscreen, dan kotoran secara menyeluruh.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">03</div>
+        <div class="tip-content">
+          <h3>Jangan Lupa Hidrasi</h3>
+          <p>Minum cukup air dan gunakan pelembab yang sesuai dengan tipe kulit Anda untuk menjaga kulit tetap terhidrasi.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">04</div>
+        <div class="tip-content">
+          <h3>Eksfoliasi Secara Teratur</h3>
+          <p>Eksfoliasi 1-3 kali seminggu untuk mengangkat sel kulit mati dan mencerahkan kulit, tapi jangan berlebihan.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">05</div>
+        <div class="tip-content">
+          <h3>Perhatikan Ingredient</h3>
+          <p>Kenali bahan-bahan dalam produk skincare dan pilih yang sesuai dengan kebutuhan kulit Anda.</p>
+        </div>
+      </div>
+      
+      <!-- Tambahan 3 tips baru -->
+      <div class="tip-item">
+        <div class="tip-number">06</div>
+        <div class="tip-content">
+          <h3>Gunakan Serum Vitamin C di Pagi Hari</h3>
+          <p>Serum vitamin C membantu melindungi kulit dari radikal bebas, mencerahkan kulit, dan merangsang produksi kolagen.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">07</div>
+        <div class="tip-content">
+          <h3>Jangan Sentuh Wajah Sembarangan</h3>
+          <p>Tangan kita mengandung banyak bakteri yang dapat menyebabkan jerawat. Hindari menyentuh wajah secara berlebihan.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">08</div>
+        <div class="tip-content">
+          <h3>Ganti Sarung Bantal Secara Rutin</h3>
+          <p>Sarung bantal dapat mengumpulkan minyak, kotoran, dan bakteri yang dapat menyebabkan masalah kulit. Ganti setidaknya seminggu sekali.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bagian Rekomendasi Produk -->
+  <section class="product-recommendations">
+    <div class="section-header">
+      <h2>Rekomendasi Produk Skincare</h2>
+      <p>Produk-produk terbaik untuk merawat kesehatan dan kecantikan kulit Anda</p>
+    </div>
+    
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/52/26/9e/52269e89bc4f2c4c8419b8e67dced94f.jpg" alt="Facial Cleanser">
+        </div>
+        <div class="product-info">
+          <h3>Cetaphil Gentle Skin Cleanser</h3>
+          <p class="product-category">Pembersih Wajah</p>
+          <p class="product-description">Pembersih wajah lembut yang cocok untuk semua jenis kulit, termasuk kulit sensitif.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(1500+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 180.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/fb/8f/6b/fb8f6b37afab344f88fee732c723117a.jpg" alt="Toner">
+        </div>
+        <div class="product-info">
+          <h3>Some By Mi AHA-BHA-PHA Toner</h3>
+          <p class="product-category">Toner</p>
+          <p class="product-description">Toner eksfoliasi ringan yang membantu mencerahkan kulit dan mengatasi masalah jerawat.</p>
+          <div class="product-rating">
+            <span>★★★★☆</span>
+            <span class="rating-count">(1200+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 150.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/df/c4/d0/dfc4d044f6a4335acde482e40473afbc.jpg" alt="Serum">
+        </div>
+        <div class="product-info">
+          <h3>The Ordinary Niacinamide 10% + Zinc 1%</h3>
+          <p class="product-category">Serum</p>
+          <p class="product-description">Serum yang membantu mengurangi tampilan pori-pori dan memperbaiki tekstur kulit.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(2000+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 135.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/09/96/e0/0996e0cf3eea9df8d7baf69facfcaedc.jpg" alt="Moisturizer">
+        </div>
+        <div class="product-info">
+          <h3>Neutrogena Hydro Boost Water Gel</h3>
+          <p class="product-category">Pelembap</p>
+          <p class="product-description">Pelembap berbasis air yang ringan dan memberikan hidrasi intensif tanpa rasa lengket.</p>
+          <div class="product-rating">
+            <span>★★★★☆</span>
+            <span class="rating-count">(1800+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 200.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/28/b2/fc/28b2fc97c081ebc2124bc8b1d36b9e72.jpg" alt="Sunscreen">
+        </div>
+        <div class="product-info">
+          <h3>Biore UV Aqua Rich Watery Essence SPF 50+</h3>
+          <p class="product-category">Sunscreen</p>
+          <p class="product-description">Tabir surya ringan dengan tekstur seperti air yang cepat menyerap dan tidak meninggalkan white cast.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(2500+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 175.000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-footer" aria-label="Newsletter subscription">
+    <h3>Get Weekly Beauty &amp; Wellness Tips</h3>
+    <form action="#" method="post" onsubmit="return false;">
+      <input type="email" placeholder="Enter your email" aria-label="Email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p>Join 10,000+ beauty enthusiasts and wellness lovers who get our weekly tips.</p>
+  </section>
+
+  <footer class="menu-footer" role="contentinfo" aria-label="Footer menu">
+    <a href="../index.html">Home</a>
+    <a href="#">FAQ</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact Us</a>
+  </footer>
+
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      position: relative;
+    }
+    .close-btn {
+      color: #aaa;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close-btn:hover,
+    .close-btn:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- Modal Structure -->
+  <div id="articleModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+    <div class="modal-content">
+      <span class="close-btn" aria-label="Close modal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <!-- Hidden Article Database -->
+  <div id="articleDatabase" style="display:none;">
+    <div data-article="skincare-routine">
+      <h2>Skincare Routines</h2>
+      <p>Panduan lengkap untuk membangun rutinitas skincare yang sesuai dengan kebutuhan kulit Anda.</p>
+      <p>Mulailah dengan pembersih wajah yang lembut, diikuti dengan toner, serum, pelembap, dan tabir surya. Sesuaikan produk dengan tipe kulit Anda dan lakukan secara rutin untuk hasil optimal.</p>
+    </div>
+    <div data-article="korean-skincare">
+      <h2>Korean Skincare</h2>
+      <p>Rahasia kulit glowing ala Korea yang bisa kamu terapkan dalam 10 langkah sederhana.</p>
+      <p>Langkah-langkah meliputi double cleansing, exfoliating, essence, serum, sheet mask, dan pelembap. Fokus pada hidrasi dan perlindungan kulit dari sinar matahari.</p>
+    </div>
+    <div data-article="diy-face-masks">
+      <h2>DIY Face Masks</h2>
+      <p>Resep masker wajah alami yang mudah dibuat di rumah menggunakan bahan-bahan dapur.</p>
+      <p>Contohnya masker madu dan yogurt untuk melembapkan, masker kopi untuk eksfoliasi, dan masker alpukat untuk nutrisi rambut.</p>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+
+  <style>
+    /* CSS untuk Bagian Rekomendasi Produk */
+    .product-recommendations {
+      padding: 60px 0;
+      background-color: #f9f5f3;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      color: #e29c8f;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .section-header p {
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .product-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    
+    .product-card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .product-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+    
+    .product-info {
+      padding: 20px;
+    }
+    
+    .product-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    
+    .product-category {
+      color: #e29c8f;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    
+    .product-description {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    
+    .product-rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .product-rating span {
+      color: #ffc107;
+    }
+    
+    .rating-count {
+      color: #888;
+      font-size: 0.8rem;
+      margin-left: 5px;
+    }
+    
+    .product-price {
+      font-weight: 600;
+      color: #d48a7d;
+      font-size: 1.1rem;
+    }
+  </style>
+</body>
+</html>
+

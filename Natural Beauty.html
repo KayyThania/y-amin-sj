@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Beauty - Beauty & Self-Growth</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* CSS Khusus untuk Halaman Natural Beauty */
+    .natural-header {
+      background-color: #f9f5f3;
+      padding: 60px 0;
+      text-align: center;
+    }
+    
+    .natural-header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #e29c8f;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .natural-header p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: #666;
+    }
+    
+    .natural-categories {
+      padding: 50px 0;
+      background-color: #fff;
+    }
+    
+    .category-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    
+    .natural-card {
+      background-color: #f9f5f3;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .natural-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .natural-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .natural-card-content {
+      padding: 20px;
+    }
+    
+    .natural-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 10px;
+    }
+    
+    .natural-card p {
+      color: #666;
+      margin-bottom: 15px;
+      min-height: 60px;
+    }
+    
+    .natural-card a {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #e29c8f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .natural-card a:hover {
+      background-color: #d48a7d;
+    }
+    
+    .featured-diy {
+      padding: 50px 0;
+      background-color: #f9f5f3;
+    }
+    
+    .featured-diy h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 40px;
+    }
+    
+    .diy-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    
+    .diy-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .diy-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .diy-content {
+      padding: 20px;
+    }
+    
+    .diy-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 10px;
+    }
+    
+    .diy-card p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    
+    .diy-card a {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #e29c8f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .diy-card a:hover {
+      background-color: #d48a7d;
+    }
+    
+    .natural-tips {
+      padding: 50px 0;
+      background-color: #fff;
+    }
+    
+    .natural-tips h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 40px;
+    }
+    
+    .tips-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .tip-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #f9f5f3;
+      border-radius: 10px;
+    }
+    
+    .tip-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #e29c8f;
+      margin-right: 20px;
+      min-width: 50px;
+    }
+    
+    .tip-content h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d48a7d;
+      margin-bottom: 10px;
+    }
+    
+    .tip-content p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Beauty &amp; Self-Growth</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../beauty.html">Beauty</a>
+      <a href="../self growth.html">Self Growth</a>
+      <a href="../community.html">Community</a>
+      <a href="../about Us.html">About Us</a>
+    </nav>
+    <div class="search-box">
+      <input type="text" placeholder="Search in site" aria-label="Search in site" />
+    </div>
+  </header>
+
+  <section class="natural-header">
+    <h1>Natural Beauty</h1>
+    <p>Explore natural and organic beauty products and DIY recipes.</p>
+  </section>
+
+  <section class="natural-categories">
+    <div class="category-container">
+      <div class="natural-card">
+        <img src="https://i.pinimg.com/736x/d8/dd/c6/d8ddc621048f89dc9bf42bace9ff1efa.jpg" alt="Organic Skincare">
+        <div class="natural-card-content">
+          <h3>Organic Skincare</h3>
+          <p>Produk perawatan kulit organik yang bebas dari bahan kimia berbahaya dan ramah lingkungan.</p>
+          <a href="../beauty.html" class="read-more" data-article="organic-skincare">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="natural-card">
+        <img src="https://i.pinimg.com/736x/61/e9/00/61e90004823f8ad90fc94729c76af762.jpg" alt="DIY Beauty Recipes">
+        <div class="natural-card-content">
+          <h3>DIY Beauty Recipes</h3>
+          <p>Resep kecantikan buatan sendiri menggunakan bahan-bahan alami dari dapur Anda.</p>
+          <a href="../beauty.html" class="read-more" data-article="diy-beauty-recipes">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="natural-card">
+        <img src="https://i.pinimg.com/736x/5a/72/8b/5a728bd827973fb4332978810c896b58.jpg" alt="Herbal Remedies">
+        <div class="natural-card-content">
+          <h3>Herbal Remedies</h3>
+          <p>Solusi herbal untuk berbagai masalah kecantikan dan kesehatan kulit.</p>
+          <a href="../beauty.html" class="read-more" data-article="herbal-remedies">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="natural-card">
+        <img src="https://i.pinimg.com/736x/1b/97/de/1b97de9c2dfc7c46a99ce6a689ad6e7e.jpg" alt="Clean Beauty">
+        <div class="natural-card-content">
+          <h3>Clean Beauty</h3>
+          <p>Produk kecantikan yang bebas dari bahan berbahaya namun tetap efektif.</p>
+          <a href="../beauty.html" class="read-more" data-article="clean-beauty">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="natural-card">
+        <img src="https://i.pinimg.com/736x/9f/18/ce/9f18ce77a26b7f8468dfc64f99e4f435.jpg" alt="Eco-Friendly Beauty">
+        <div class="natural-card-content">
+          <h3>Eco-Friendly Beauty</h3>
+          <p>Produk kecantikan yang ramah lingkungan dan berkelanjutan.</p>
+          <a href="../beauty.html" class="read-more" data-article="eco-friendly-beauty">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="natural-card">
+        <img src="https://i.pinimg.com/736x/6f/69/8f/6f698f5ebea7e20e7bd0ea9967eda8d2.jpg" alt="Essential Oils">
+        <div class="natural-card-content">
+          <h3>Essential Oils</h3>
+          <p>Panduan lengkap tentang minyak esensial dan manfaatnya untuk kecantikan.</p>
+          <a href="../beauty.html" class="read-more" data-article="essential-oils">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-diy">
+    <h2>Featured DIY Beauty Recipes</h2>
+    <div class="diy-container">
+      <div class="diy-card">
+        <img src="https://i.pinimg.com/736x/93/4f/49/934f49dcf98a4f60892ffcf60783d758.jpg" alt="Honey Face Mask">
+        <div class="diy-content">
+          <h3>Masker Wajah Madu dan Yogurt</h3>
+          <p>Masker wajah alami yang melembapkan dan mencerahkan kulit dengan bahan-bahan dari dapur Anda.</p>
+          <a href="../beauty.html">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="diy-card">
+        <img src="https://i.pinimg.com/736x/9d/45/bd/9d45bd7ec35f7509d9882323fef594e9.jpg" alt="Coffee Scrub">
+        <div class="diy-content">
+          <h3>Scrub Kopi untuk Tubuh</h3>
+          <p>Scrub tubuh alami dari ampas kopi untuk mengangkat sel kulit mati dan mengatasi selulit.</p>
+          <a href="../beauty.html">Baca Selengkapnya</a>
+        </div>
+      </div>
+      
+      <div class="diy-card">
+        <img src="https://i.pinimg.com/736x/59/e9/5a/59e95a91511478ae1b6d8ca098818a25.jpg" alt="Avocado Hair Mask">
+        <div class="diy-content">
+          <h3>Masker Rambut Alpukat</h3>
+          <p>Masker rambut alami dari alpukat untuk rambut kering dan rusak yang membutuhkan nutrisi ekstra.</p>
+          <a href="beauty.html">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="natural-tips">
+    <h2>Natural Beauty Tips</h2>
+    <div class="tips-container">
+      <div class="tip-item">
+        <div class="tip-number">01</div>
+        <div class="tip-content">
+          <h3>Baca Label Produk</h3>
+          <p>Selalu baca label produk dan hindari bahan berbahaya seperti paraben, sulfat, dan phthalates yang dapat membahayakan kulit dan kesehatan.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">02</div>
+        <div class="tip-content">
+          <h3>Gunakan Minyak Alami</h3>
+          <p>Minyak alami seperti minyak kelapa, jojoba, dan argan dapat menjadi pelembap yang efektif untuk kulit dan rambut tanpa bahan kimia tambahan.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">03</div>
+        <div class="tip-content">
+          <h3>Konsumsi Makanan Bergizi</h3>
+          <p>Kecantikan dimulai dari dalam. Konsumsi makanan kaya antioksidan, vitamin, dan mineral untuk kulit yang sehat dan bercahaya.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">04</div>
+        <div class="tip-content">
+          <h3>Hindari Produk dengan Pewangi Buatan</h3>
+          <p>Pewangi buatan dapat menyebabkan iritasi dan alergi. Pilih produk dengan aroma alami dari minyak esensial.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">05</div>
+        <div class="tip-content">
+          <h3>Gunakan Aloe Vera</h3>
+          <p>Lidah buaya memiliki sifat menenangkan dan anti-inflamasi yang baik untuk kulit. Gunakan gel lidah buaya segar untuk berbagai masalah kulit.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">06</div>
+        <div class="tip-content">
+          <h3>Lakukan Detoksifikasi Kulit</h3>
+          <p>Gunakan masker tanah liat secara rutin untuk mendetoksifikasi kulit dan mengangkat kotoran dari pori-pori.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">07</div>
+        <div class="tip-content">
+          <h3>Pilih Kemasan Ramah Lingkungan</h3>
+          <p>Pilih produk dengan kemasan yang dapat didaur ulang atau biodegradable untuk mengurangi dampak lingkungan.</p>
+        </div>
+      </div>
+      
+      <div class="tip-item">
+        <div class="tip-number">08</div>
+        <div class="tip-content">
+          <h3>Gunakan Teh Hijau</h3>
+          <p>Teh hijau kaya akan antioksidan dan dapat digunakan sebagai toner alami atau kompres untuk mengurangi pembengkakan dan kemerahan pada kulit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bagian Rekomendasi Produk -->
+  <section class="product-recommendations">
+    <div class="section-header">
+      <h2>Rekomendasi Produk Natural Beauty</h2>
+      <p>Produk-produk kecantikan alami dan organik terbaik untuk perawatan kulit dan tubuh</p>
+    </div>
+    
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/89/be/12/89be122c3666419f354eb67bbe25db2f.jpg" alt="Organic Cleanser">
+        </div>
+        <div class="product-info">
+          <h3>Sensatia Botanicals Facial Cleanser</h3>
+          <p class="product-category">Pembersih Wajah Organik</p>
+          <p class="product-description">Pembersih wajah organik dengan bahan-bahan alami yang lembut untuk semua jenis kulit.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(950+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 150.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/6f/cf/85/6fcf859b35e2974859986715be89e0f5.jpg" alt="Natural Serum">
+        </div>
+        <div class="product-info">
+          <h3>Skin Dewi Rosehip Oil</h3>
+          <p class="product-category">Serum Alami</p>
+          <p class="product-description">Minyak rosehip organik yang kaya akan antioksidan dan vitamin untuk kulit sehat dan bercahaya.</p>
+          <div class="product-rating">
+            <span>★★★★☆</span>
+            <span class="rating-count">(800+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 185.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/2e/82/da/2e82da61c1794871c64b771071d277ac.jpg" alt="Natural Mask">
+        </div>
+        <div class="product-info">
+          <h3>Herbivore Blue Tansy Mask</h3>
+          <p class="product-category">Masker Wajah Alami</p>
+          <p class="product-description">Masker wajah dengan blue tansy oil yang menenangkan kulit sensitif dan mengatasi kemerahan.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(650+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 350.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://medino-product.imgix.net/sukin-rosehip-hydrating-day-cream-120ml-6a3d828e2fadd96eb9a0d5ad7eca2d86.png?h=750&w=750&bg=FFF&auto=format,compress,enhance&fm=jpg&q=90" alt="Natural Moisturizer">
+        </div>
+        <div class="product-info">
+          <h3>Sukin Hydrating Day Cream</h3>
+          <p class="product-category">Pelembap Alami</p>
+          <p class="product-description">Krim pelembap harian dengan bahan-bahan botanis yang memberikan hidrasi tanpa rasa lengket.</p>
+          <div class="product-rating">
+            <span>★★★★☆</span>
+            <span class="rating-count">(1200+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 120.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/0c/10/d7/0c10d7e083a19e583884d0a7827e0682.jpg" alt="Natural Sunscreen">
+        </div>
+        <div class="product-info">
+          <h3>Badger SPF 30 Clear Zinc Sunscreen</h3>
+          <p class="product-category">Sunscreen Alami</p>
+          <p class="product-description">Tabir surya mineral dengan zinc oxide yang aman untuk kulit sensitif dan terumbu karang.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(750+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 250.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/60/f2/8c/60f28c28fcc601c9a5d70c059bbe73e4.jpg" alt="Natural Lip Balm">
+        </div>
+        <div class="product-info">
+          <h3>Burt's Bees Lip Balm</h3>
+          <p class="product-category">Lip Balm Alami</p>
+          <p class="product-description">Lip balm dengan beeswax dan minyak alami yang melembapkan bibir kering tanpa bahan kimia berbahaya.</p>
+          <div class="product-rating">
+            <span>★★★★☆</span>
+            <span class="rating-count">(1500+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 85.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/a4/e0/47/a4e047c344526e9d8af42bc9730eb0aa.jpg" alt="Natural Deodorant">
+        </div>
+        <div class="product-info">
+          <h3>Schmidt's Natural Deodorant</h3>
+          <p class="product-category">Deodoran Alami</p>
+          <p class="product-description">Deodoran alami tanpa aluminium yang efektif menyerap keringat dan menghilangkan bau badan.</p>
+          <div class="product-rating">
+            <span>★★★★★</span>
+            <span class="rating-count">(900+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 120.000</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.pinimg.com/736x/d4/91/f6/d491f6054b7fbcc622e09ffe75339830.jpg" alt="Natural Shampoo">
+        </div>
+        <div class="product-info">
+          <h3>Avalon Organics Shampoo</h3>
+          <p class="product-category">Shampoo Organik</p>
+          <p class="product-description">Shampoo organik dengan bahan-bahan alami yang membersihkan rambut tanpa menghilangkan minyak alami.</p>
+          <div class="product-rating">
+            <span>★★★★☆</span>
+            <span class="rating-count">(850+ ulasan)</span>
+          </div>
+          <p class="product-price">Rp 180.000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* CSS untuk Bagian Rekomendasi Produk */
+    .product-recommendations {
+      padding: 60px 0;
+      background-color: #f9f5f3;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      color: #e29c8f;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .section-header p {
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .product-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    
+    .product-card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .product-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+    
+    .product-info {
+      padding: 20px;
+    }
+    
+    .product-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    
+    .product-category {
+      color: #e29c8f;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    
+    .product-description {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    
+    .product-rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .product-rating span {
+      color: #ffc107;
+    }
+    
+    .rating-count {
+      color: #888;
+      font-size: 0.8rem;
+      margin-left: 5px;
+    }
+    
+    .product-price {
+      font-weight: 600;
+      color: #d48a7d;
+      font-size: 1.1rem;
+    }
+  </style>
+
+  <section class="newsletter-footer" aria-label="Newsletter subscription">
+    <h3>Get Weekly Beauty &amp; Wellness Tips</h3>
+    <form action="#" method="post" onsubmit="return false;">
+      <input type="email" placeholder="Enter your email" aria-label="Email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p>Join 10,000+ beauty enthusiasts and wellness lovers who get our weekly tips.</p>
+  </section>
+
+  <footer class="menu-footer" role="contentinfo" aria-label="Footer menu">
+    <a href="../index.html">Home</a>
+    <a href="#">FAQ</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact Us</a>
+  </footer>
+
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      position: relative;
+    }
+    .close-btn {
+      color: #aaa;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close-btn:hover,
+    .close-btn:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- Modal Structure -->
+  <div id="articleModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+    <div class="modal-content">
+      <span class="close-btn" aria-label="Close modal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <!-- Hidden Article Database -->
+  <div id="articleDatabase" style="display:none;">
+    <div data-article="organic-skincare">
+      <h2>Organic Skincare</h2>
+      <p>Produk perawatan kulit organik yang bebas dari bahan kimia berbahaya dan ramah lingkungan.</p>
+      <p>Gunakan produk dengan bahan alami seperti aloe vera, minyak jojoba, dan ekstrak chamomile untuk perawatan kulit yang lembut dan efektif.</p>
+    </div>
+    <div data-article="diy-beauty-recipes">
+      <h2>DIY Beauty Recipes</h2>
+      <p>Resep kecantikan buatan sendiri menggunakan bahan-bahan alami dari dapur Anda.</p>
+      <p>Contohnya masker madu dan yogurt, scrub kopi, dan masker alpukat yang mudah dibuat dan aman untuk kulit.</p>
+    </div>
+    <div data-article="herbal-remedies">
+      <h2>Herbal Remedies</h2>
+      <p>Solusi herbal untuk berbagai masalah kecantikan dan kesehatan kulit.</p>
+      <p>Gunakan bahan seperti lidah buaya, teh hijau, dan minyak esensial untuk mengatasi iritasi, kemerahan, dan peradangan kulit.</p>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
